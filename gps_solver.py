@@ -79,7 +79,7 @@ def solve_gauss_newton(satellites, pseudoranges, initial_guess):
 
 def generate_all_plots():
   csv_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Dataset.csv")
-  data = np.genfromtxt("Dataset.csv", delimiter=",", skip_header=1)
+  data = np.genfromtxt(csv_path, delimiter=",", skip_header=1)
   satellites = data[:, 3:6]
   pseudoranges = data[:,6]
   #orange county starting guess
